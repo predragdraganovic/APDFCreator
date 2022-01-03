@@ -1,0 +1,4 @@
+*build-*
+src/CmakeLists.txt.user*
+.vscode
+*.bak

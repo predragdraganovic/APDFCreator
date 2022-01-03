@@ -1,0 +1,15 @@
+<RCC>
+    <qresource prefix="/">
+        <file alias="/icons/paragraph.png">res/icons/paragraph.png</file>
+        <file alias="/icons/header.png">res/icons/header.png</file>
+        <file alias="/icons/apdficon.png">res/icons/apdficon.png</file>
+        <file alias="/icons/toogle_grid.png">res/icons/toogle_grid.png</file>
+        <file alias="/icons/imagetool.png">res/icons/imagetool.png</file>
+        <file alias="/icons/formula.png">res/icons/formula.png</file>
+        <file alias="/icons/chevron-left-24.png">res/icons/chevron-left-24.png</file>
+        <file alias="/icons/chevron-right-24.png">res/icons/chevron-right-24.png</file>
+        <file alias="/icons/insert-page-48.png">res/icons/insert-page-48.png</file>
+        <file alias="/icons/delete-file-48.png">res/icons/delete-file-48.png</file>
+    </qresource>
+    <qresource prefix="/images"/>
+</RCC>
