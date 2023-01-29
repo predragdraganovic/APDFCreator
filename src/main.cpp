@@ -29,8 +29,9 @@ int main(int argc, char *argv[])
         latex->start();
         started = latex->waitForStarted();
         latex->waitForFinished();
-        if(started)
+        if(started){
             foundTex = true;
+        }
     }
 
     delete latex;

@@ -30,8 +30,9 @@ TextTool::TextTool(int size, QGraphicsItem* parent)
 
 void TextTool::focusOutEvent(QFocusEvent *event)
 {
-    if(textInteractionFlags() ==  Qt::TextEditorInteraction)
+    if(textInteractionFlags() ==  Qt::TextEditorInteraction){
         setTextInteractionFlags(Qt::NoTextInteraction);
+    }
     QTextCursor c = textCursor();
     c.clearSelection();
     setTextCursor(c);
@@ -56,7 +57,7 @@ QString TextTool::getTextData() const
     return textDocument->toMarkdown();
 }
 
-void TextTool::setTextData(QString text)
+void TextTool::setTextData(const QString& text)
 {
     textDocument->setMarkdown(text);
 }

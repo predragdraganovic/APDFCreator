@@ -23,7 +23,7 @@ public:
     bool sceneEvent(QEvent *event) override;
 
     QString getTextData() const;
-    void setTextData(QString newTextData);
+    void setTextData(const QString& text);
 
     QTextDocument *getTextDocument() const;
     QVBoxLayout *getToolOptions() const;

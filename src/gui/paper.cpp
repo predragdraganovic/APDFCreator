@@ -10,7 +10,7 @@
 // as the scene rectangle.
 
 
-Paper::Paper(QPageSize page_size, int res, QObject *parent) : QGraphicsScene(parent)
+Paper::Paper(const QPageSize& page_size, int res, QObject *parent) : QGraphicsScene(parent)
 {
 
     setRes(res);
@@ -54,7 +54,7 @@ void Paper::setPaperRect(QRectF newRect)
     paperRectangle=newRect;
 }
 // TODO: testirati refresh
-void Paper::applyProperties(PageProperties pageProperties)
+void Paper::applyProperties(const PageProperties& pageProperties)
 {
     setMarginBottom(pageProperties.getMarginBottom());
     setMarginTop(pageProperties.getMarginTop());
@@ -84,7 +84,7 @@ void Paper::redrawPaper(double newRatioX, double newRatioY)
 {
     this->removeItem(rectItem);
     QList<QGraphicsItem *> currentTools;
-    for(auto item : items()){
+    for(auto *item : items()){
             if(item->type() == TextTool::Type)
             {
                 TextTool *currentTool = (TextTool*)item;
@@ -115,7 +115,7 @@ void Paper::redrawPaper(double newRatioX, double newRatioY)
             this->removeItem(item);
     }
     rectItem=this->addRect(paperRectangle, QPen(),QBrush(Qt::white));
-    for(auto tool : currentTools)
+    for(auto *tool : currentTools)
     {
         this->addItem(tool);
     }
@@ -218,7 +218,9 @@ void Paper::dropEvent(QGraphicsSceneDragDropEvent *event){
 
     }
     if(itemToAdd == nullptr)
+    {
         return;
+    }
     itemToAdd->setPos(event->scenePos());
     resizeItemToFit(itemToAdd);
     moveItemWithinBounds(itemToAdd);
@@ -246,9 +248,10 @@ void Paper::contextMenuEvent(QGraphicsSceneContextMenuEvent *event){
     QPointF* pos = new QPointF(event->scenePos());
 
     QGraphicsItem* itemToRemove = itemAt(*pos, QTransform());
-    if(!itemToRemove or itemToRemove->type()==QGraphicsRectItem::Type or itemToRemove->type() == PageGrid::Type)
+    if(itemToRemove == nullptr or itemToRemove->type()==QGraphicsRectItem::Type or itemToRemove->type() == PageGrid::Type)
+    {
         return;
-
+    }
     QMenu* menu = new QMenu;
     QAction* remove = new QAction("Remove",this);
 
@@ -279,30 +282,39 @@ void Paper::removeItemFromScene()
 
 
 void Paper::moveItemWithinBounds(QGraphicsItem* item){
-    if(item==nullptr or item->type() == PageGrid::Type)
+    if(item==nullptr or item->type() == PageGrid::Type){
         return;
-    qreal newX = item->scenePos().x(), newY=item->scenePos().y();
+    }
+    qreal newX = item->scenePos().x();
+    qreal newY=item->scenePos().y();
 
-    if(newX < sceneRect().x() + fromMMtoPixel(marginLeft))
+    if(newX < sceneRect().x() + fromMMtoPixel(marginLeft)){
         newX = sceneRect().x() + fromMMtoPixel(marginLeft);
-    else if (newX > sceneRect().width() - fromMMtoPixel(marginRight))
+    }
+    else if (newX > sceneRect().width() - fromMMtoPixel(marginRight)){
         newX = sceneRect().width() - item->boundingRect().width() - fromMMtoPixel(marginRight);
-    if(newY <sceneRect().y()+fromMMtoPixel(marginTop))
+    }
+    if(newY <sceneRect().y()+fromMMtoPixel(marginTop)){
         newY = sceneRect().y() + fromMMtoPixel(marginTop);
-    else if(newY > sceneRect().height()-fromMMtoPixel(marginBottom))
+    }
+    else if(newY > sceneRect().height()-fromMMtoPixel(marginBottom)){
         newY = sceneRect().height() - item->boundingRect().height() - fromMMtoPixel(marginBottom);
+    }
 
-    if(newX+item->boundingRect().width() > sceneRect().width() - fromMMtoPixel(marginRight) )
+    if(newX+item->boundingRect().width() > sceneRect().width() - fromMMtoPixel(marginRight) ){
         newX-= (newX+item->boundingRect().width()) - (sceneRect().width() - fromMMtoPixel(marginRight));
-    if(newY+item->boundingRect().height() > sceneRect().height() - fromMMtoPixel(marginBottom))
+    }
+    if(newY+item->boundingRect().height() > sceneRect().height() - fromMMtoPixel(marginBottom)){
         newY-= (newY+item->boundingRect().height()) - (sceneRect().height() - fromMMtoPixel(marginBottom));
+    }
     item->setPos(newX,newY);
 }
 
 void Paper::resizeItemToFit(QGraphicsItem *item)
 {
-    if(item == nullptr)
+    if(item == nullptr){
         return;
+    }
     if(item->type() == TextTool::Type){
         TextTool* textItem = (TextTool*)item;
 

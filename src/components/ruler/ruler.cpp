@@ -1,8 +1,9 @@
 #include "ruler.h"
+#include <utility>
 
 Ruler::Ruler(RulerOrientation orientation, QPageSize pageSize, int res)
 {
-    this->pageSize = pageSize;
+    this->pageSize = std::move(pageSize);
     this->res = res;
     this->pagePixel = QPageSize::sizePixels(this->pageSize.id(), res);
     this->orientation = orientation;

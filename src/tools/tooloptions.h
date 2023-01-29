@@ -34,7 +34,7 @@ signals:
 public slots:
     void componentFocused(QGraphicsItem*,QGraphicsItem*);
     void changeTextToolFont(QFont);
-    void changeTextToolFontSize(QString);
+    void changeTextToolFontSize(const QString&);
     void changeImageToolScale(int);
 
 

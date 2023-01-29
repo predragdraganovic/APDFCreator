@@ -22,7 +22,7 @@ DocumentToolbar::DocumentToolbar()
 }
 
 
-QAction* DocumentToolbar::initAction(QString objectName, QString text, QString iconPath, QString tooltipText){
+QAction* DocumentToolbar::initAction(const QString& objectName, const QString& text,const QString& iconPath,const QString& tooltipText){
     QAction *action = new QAction(QIcon(iconPath), text);
     action->setToolTip(tooltipText);
     this->addAction(action);

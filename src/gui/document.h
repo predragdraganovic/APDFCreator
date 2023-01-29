@@ -21,13 +21,13 @@ public:
     Paper* getPaperAt(int position);
     Paper* getCurrentPage();
 
-    void appendPage(QPageSize page_size, int res, QObject *parent);
+    void appendPage(const QPageSize& page_size, int res, QObject *parent);
 
     Paper* getLastPage();
 
     int getDocumentLength(){ return papers.length(); }
 
-    void applyProperties(PageProperties properties, SettingsScopeCombo::SetupScope propertiesScope);
+    void applyProperties(const PageProperties& properties, SettingsScopeCombo::SetupScope propertiesScope);
 
     /** Leaves only one blank page */
     void clearAllPages();

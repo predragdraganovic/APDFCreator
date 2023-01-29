@@ -35,7 +35,7 @@ DocumentPageController::DocumentPageController(int currentPage,int currentNumber
     connect(inputCurrentPage, &QLineEdit::textEdited, this, &DocumentPageController::currentPageValueChanged);
 }
 
-void DocumentPageController::currentPageValueChanged(QString value){
+void DocumentPageController::currentPageValueChanged(const QString& value){
     // emits in both ifs because we can be at page 3 and then jump to 0, field will become 1 but the page wont change
     if(value.toInt() > this->lblTotalPages->text().toInt()){
         int maxPage = this->lblTotalPages->text().toInt();

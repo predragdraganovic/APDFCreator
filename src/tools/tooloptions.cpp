@@ -27,27 +27,23 @@ void ToolOptions::componentFocused(QGraphicsItem * current, QGraphicsItem *previ
             setImageToolOptions(*(ImageTool*)current);
         }
 
-        emit componentOptionsReady(componentOptionsHolder);
+       emit componentOptionsReady(componentOptionsHolder);
      }
 
      if(current == nullptr && previous->type()==TextTool::Type){
         if(fontSelector->hasFocus() or fontSize->hasFocus() ){
             return;
         }
-        else{
-            emit removeComponentOptions();
-        }
-    }
 
-    else if (current == nullptr && previous->type()==ImageTool::Type){
+        emit removeComponentOptions();
+    }
+     else if (current == nullptr && previous->type()==ImageTool::Type){
 
         if(scaleSelector->hasFocus()){
             return;
         }
-        else{
 
-            emit removeComponentOptions();
-        }
+        emit removeComponentOptions();
     }
 
 
@@ -64,7 +60,7 @@ void ToolOptions::setTextToolOptions(TextTool& current)
     itemToEdit = &current;
     componentOptionsHolder->setLayout(current.getToolOptions());
 
-    for(int i=0;i<componentOptionsHolder->layout()->count();i++)
+    for(int i=0;i<componentOptionsHolder->layout()->count();i++){
         if(componentOptionsHolder->layout()->itemAt(i)->widget()->objectName()=="fontSelector"){
             fontSelector = (QFontComboBox*)componentOptionsHolder->layout()->itemAt(i)->widget();
             fontSelector->setCurrentFont(current.getTextDocument()->defaultFont());
@@ -74,6 +70,7 @@ void ToolOptions::setTextToolOptions(TextTool& current)
            fontSize = (QComboBox*)componentOptionsHolder->layout()->itemAt(i)->widget();
            fontSize->setCurrentText(QString::number(qRound(current.getTextDocument()->defaultFont().pointSize() / (300/72.0))));
 
+        }
     }
 
     connect(fontSize,SIGNAL(currentTextChanged(QString)),this,SLOT(changeTextToolFontSize(QString)));
@@ -84,11 +81,12 @@ void ToolOptions::setImageToolOptions(ImageTool& current)
 {
     itemToEdit = &current;
     componentOptionsHolder->setLayout(current.getToolOptions());
-    for(int i=0;i<componentOptionsHolder->layout()->count();i++)
+    for(int i=0;i<componentOptionsHolder->layout()->count();i++){
         if(componentOptionsHolder->layout()->itemAt(i)->widget()->objectName()=="scaleSelector"){
             scaleSelector = (QSlider*)componentOptionsHolder->layout()->itemAt(i)->widget();
             connect(scaleSelector,SIGNAL(valueChanged(int)),this,SLOT(changeImageToolScale(int)));
         }
+    }
 }
 
 void ToolOptions::changeTextToolFont(QFont newFont)
@@ -106,7 +104,7 @@ void ToolOptions::changeTextToolFont(QFont newFont)
     current->setFocus();
 }
 
-void ToolOptions::changeTextToolFontSize(QString newSize)
+void ToolOptions::changeTextToolFontSize(const QString& newSize)
 {
 
     TextTool* current = (TextTool*)itemToEdit;
