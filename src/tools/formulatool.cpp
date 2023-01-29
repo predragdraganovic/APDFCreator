@@ -14,7 +14,7 @@ FormulaTool::FormulaTool()
     setFlags(QGraphicsItem::ItemIsMovable);
 }
 
-FormulaTool::FormulaTool(QString latex, int res){
+FormulaTool::FormulaTool(const QString& latex, int res){
     latexString = latex;
     latexRes = res;
 
@@ -36,7 +36,7 @@ bool FormulaTool::sceneEvent(QEvent *event)
 
 
 
-QPixmap FormulaTool::updateImage(int latexRes, QString latexString){
+QPixmap FormulaTool::updateImage(int latexRes, const QString& latexString){
     QFile file("formula.tex");
 
     if(!file.open(QIODevice::WriteOnly | QIODevice::Text)){
@@ -109,11 +109,9 @@ QPixmap FormulaTool::updateImage(int latexRes, QString latexString){
         QFile::remove("formula1.png");
         return ret;
     }
-    else {
-        qCritical() << "Png doesn't exist";
-        return QPixmap();
-    }
 
+    qCritical() << "Png doesn't exist";
+    return QPixmap();
 }
 
 const QString &FormulaTool::getLatexString() const

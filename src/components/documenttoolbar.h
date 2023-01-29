@@ -31,7 +31,7 @@ private:
     QAction *insertNewPage;
     QAction *deletePageAction;
 
-    QAction* initAction( QString objectName, QString text, QString iconPath, QString tooltipText);
+    QAction* initAction( const QString& objectName,const QString& text, const QString& iconPath,const QString& tooltipText);
 
 };
 

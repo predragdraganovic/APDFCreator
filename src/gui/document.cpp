@@ -25,7 +25,7 @@ Paper* Document::getCurrentPage(){
     return this->papers[this->currentPage];
 }
 
-void Document::appendPage(QPageSize page_size, int res, QObject *parent){
+void Document::appendPage(const QPageSize& page_size, int res, QObject *parent){
     this->papers.append(new Paper(page_size, res, parent));
     this->papers.last()->setGridVisibility(this->isVisibleGrid);
     emit documentLengthChanged(this->papers.length());
@@ -72,9 +72,9 @@ void Document::setCurrentPage(int number){
 
 void Document::slotToggleGridVisibility(){
     this->isVisibleGrid = !this->isVisibleGrid;
-    for(int i = 0; i < this->papers.length(); i++){
-        if(this->papers[i] != nullptr){
-            this->papers[i]->setGridVisibility(this->isVisibleGrid);
+    for(auto& paper: this->papers){
+        if(paper != nullptr){
+            paper->setGridVisibility(this->isVisibleGrid);
         }
     }
 }
@@ -103,7 +103,7 @@ Paper* Document::getNewPage(){
     return newPage;
 }
 
-void Document::applyProperties(PageProperties properties, SettingsScopeCombo::SetupScope propertiesScope){
+void Document::applyProperties(const PageProperties& properties, SettingsScopeCombo::SetupScope propertiesScope){
 
     if(propertiesScope == SettingsScopeCombo::SetupScope::THIS_PAGE){
         getCurrentPage()->applyProperties(properties);
@@ -121,7 +121,7 @@ void Document::applyProperties(PageProperties properties, SettingsScopeCombo::Se
 }
 
 void Document::clearAllPages(){
-    for(auto page: papers){
+    for(auto *page: papers){
         delete page;
     }
     papers.clear();

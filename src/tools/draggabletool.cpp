@@ -4,7 +4,7 @@
 // of 2 labels where one of them represents the tool icon and the other represents
 // the tool name.
 
-DraggableTool::DraggableTool(QString fileName, QString toolName, QWidget *parent) : QWidget(parent)
+DraggableTool::DraggableTool(const QString& fileName,const QString& toolName, QWidget *parent) : QWidget(parent)
 {
     QHBoxLayout *layout = new QHBoxLayout(this);
     layout->setSpacing(0);

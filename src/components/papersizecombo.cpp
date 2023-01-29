@@ -1,6 +1,6 @@
 #include "papersizecombo.h"
 #include <iostream>
-PaperSizeCombo::PaperSizeCombo(QPageSize currentSize)
+PaperSizeCombo::PaperSizeCombo(const QPageSize& currentSize)
 {
     paperSizeOptions = new QMap<QString, QPageSize>();
 

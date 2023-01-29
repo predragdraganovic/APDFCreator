@@ -12,7 +12,7 @@ class DraggableTool : public QWidget
 {
     Q_OBJECT
 public:
-    explicit DraggableTool(QString fileName, QString toolName, QWidget *parent = nullptr);
+    explicit DraggableTool(const QString& fileName,const QString& toolName, QWidget *parent = nullptr);
 
 
 private:

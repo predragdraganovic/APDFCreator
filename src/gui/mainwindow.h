@@ -61,7 +61,7 @@ private slots:
 
 private:
     void initRulers();
-    void setViewScale(QPageSize pageSize);
+    void setViewScale(const QPageSize& pageSize);
 
     Ui::MainWindow *ui;
     Document *document;

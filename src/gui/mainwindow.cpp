@@ -96,7 +96,7 @@ void MainWindow::initRulers(){
     ui->graphicsViewRulerHorizontal->setRenderHint(QPainter::Antialiasing);
 }
 
-void MainWindow::setViewScale(QPageSize pageSize)
+void MainWindow::setViewScale(const QPageSize& pageSize)
 {
     QScreen *srn = QApplication::screens().at(0);
     qreal dotsPerInch = (qreal)srn->logicalDotsPerInch();
@@ -242,12 +242,12 @@ void MainWindow::on_actionNew_triggered()
     document->createNewDocument();
     //document->addPage();
 
-    if(io->getCurrentFile()){
+    if(io->getCurrentFile() != nullptr){
         io->clearCurrentFile();
     }
 }
 
-void MainWindow::addToolOptions(QGroupBox *)
+void MainWindow::addToolOptions(QGroupBox * /*unused*/)
 {
     ui->verticalLayout_2->addWidget(toolOpts->getComponentOptionsHolder());
 }

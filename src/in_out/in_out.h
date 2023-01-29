@@ -31,7 +31,7 @@ public:
 private:
     QFile *currentFile = nullptr;
     void saveToFile(Document&);
-    QJsonDocument fromPaperToJson(Document &paper);
+    QJsonDocument fromPaperToJson(Document &document);
 };
 
 #endif // INPUTOUTPUT_H

@@ -41,7 +41,7 @@ public slots:
     void currentPageChanged(int currentPage);
 
     /** Catches whenever input value changes */
-    void currentPageValueChanged(QString value);
+    void currentPageValueChanged(const QString& value);
 
     /** on enter, triggers only when input validator returns QValidator::Acceptable */
     void currentPageSubmit();

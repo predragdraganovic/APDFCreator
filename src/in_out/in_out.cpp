@@ -5,13 +5,12 @@
 // -----------------------------------------------------------
 
 InputOutput::InputOutput()
-{
-
-}
+= default;
 void InputOutput::exportToPdf(Document &document){
     QString filename = QFileDialog::getSaveFileName(nullptr,"Export as PDF...","","PDF file (*.pdf)");
-    if (filename == "")
+    if (filename == ""){
         return;
+    }
     QPrinter printer(QPrinter::HighResolution);
     printer.setOutputFormat(QPrinter::PdfFormat);
     printer.setOutputFileName(filename);
@@ -25,8 +24,9 @@ void InputOutput::exportToPdf(Document &document){
         bool wasVisible = document.getPaperAt(i)->getPageGrid()->isVisible();
         document.getPaperAt(i)->getPageGrid()->setVisible(false);
         document.getPaperAt(i)->render(&painter);
-        if(wasVisible)
+        if(wasVisible){
             document.getPaperAt(i)->getPageGrid()->setVisible(true);
+        }
         if(i+1 != document.getDocumentLength()){
             printer.newPage();
         }
@@ -50,10 +50,12 @@ void InputOutput::printDocument(Document &document){
             bool wasVisible = document.getPaperAt(i)->getPageGrid()->isVisible();
             document.getPaperAt(i)->getPageGrid()->setVisible(false);
             document.getPaperAt(i)->render(&painter);
-            if(wasVisible)
+            if(wasVisible){
                 document.getPaperAt(i)->getPageGrid()->setVisible(true);
-            if(i+1!=document.getDocumentLength())
+            }
+            if(i+1!=document.getDocumentLength()){
                 printer.newPage();
+            }
         }
 
         painter.end();
@@ -61,8 +63,9 @@ void InputOutput::printDocument(Document &document){
 }
 
 void InputOutput::saveToApdfAs(QString& fileName, Document& document){
-    if(fileName=="")
+    if(fileName==""){
         return;
+    }
     currentFile = new QFile(fileName);
 
     if(!currentFile->open(QIODevice::ReadWrite)){
@@ -115,7 +118,7 @@ QJsonDocument InputOutput::fromPaperToJson(Document& document){
         page.insert("Paper Height", document.getPaperAt(i)->getPageSize().sizePoints().height());
         page.insert("Page Resolution",document.getPaperAt(i)->getRes());
 
-        for(auto item : document.getPaperAt(i)->items()){
+        for(auto *item : document.getPaperAt(i)->items()){
             if(item->type() == TextTool::Type){
                 QJsonObject textItem;
                 TextTool *currentItem = (TextTool*)item;
@@ -174,8 +177,9 @@ QJsonDocument InputOutput::fromPaperToJson(Document& document){
 }
 
 void InputOutput::openApdf(QString& fileName, Document& document){
-    if(fileName == "")
+    if(fileName == ""){
         return;
+    }
     if(currentFile == nullptr){
         currentFile = new QFile(fileName);
         if(!currentFile->open(QIODevice::ReadWrite)){
