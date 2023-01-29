@@ -1,0 +1,249 @@
+\hypertarget{classDocument}{}\doxysection{Document Class Reference}
+\label{classDocument}\index{Document@{Document}}
+
+
+{\ttfamily \#include $<$document.\+h$>$}
+
+
+
+Inheritance diagram for Document\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=147pt]{classDocument__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Document\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=147pt]{classDocument__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Slots}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classDocument_afd831246ee3f719d8b9aa2091370a361}{add\+Page}} ()
+\item 
+void \mbox{\hyperlink{classDocument_a823325fd6bc08e36b3e2a44826d76258}{next\+Page}} ()
+\item 
+void \mbox{\hyperlink{classDocument_aabc940e84e5d9f8a7ba0559503d6a066}{prev\+Page}} ()
+\item 
+void \mbox{\hyperlink{classDocument_aa63a1bb71f546e43fa3ee6ead0c78176}{delete\+Current\+Page}} ()
+\item 
+void \mbox{\hyperlink{classDocument_aa171f391219bfa6a36b95281429fd674}{set\+Current\+Page}} (int number)
+\item 
+void \mbox{\hyperlink{classDocument_a7ddafb99acf42036f6de56144a682491}{slot\+Toggle\+Grid\+Visibility}} ()
+\item 
+void \mbox{\hyperlink{classDocument_a7d562298174032ef3b7e1eedbc4f2c58}{slot\+Focus\+Item\+Changed}} (QGraphics\+Item $\ast$new\+Focus\+Item, QGraphics\+Item $\ast$old\+Focus\+Item, Qt\+::\+Focus\+Reason reason)
+\item 
+void \mbox{\hyperlink{classDocument_a908cf08562e053287b6ed04fdd6ed07e}{slot\+Item\+Removed}} ()
+\item 
+void \mbox{\hyperlink{classDocument_a59775bb7e4a32c7ea787c5aca081e033}{slot\+Update\+Item\+Geometry}} (QGraphics\+Item $\ast$item)
+\end{DoxyCompactItemize}
+\doxysubsection*{Signals}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classDocument_a9c5d23675c52ff7bf7652ff0a2b9a9f1}{document\+Length\+Changed}} (int number)
+\item 
+void \mbox{\hyperlink{classDocument_a84288e90ad10c4ae41e3c62d68634208}{current\+Page\+Changed}} (int current\+Page)
+\item 
+void \mbox{\hyperlink{classDocument_aad21af71e54b17dcef342dbb7de4e599}{signal\+Focus\+Item\+Changed}} (QGraphics\+Item $\ast$new\+Focus\+Item, QGraphics\+Item $\ast$old\+Focus\+Item, Qt\+::\+Focus\+Reason reason)
+\item 
+void \mbox{\hyperlink{classDocument_a4ee71b50326acdf8a4d3bbb0eb9a4c94}{signal\+Item\+Removed}} ()
+\item 
+void \mbox{\hyperlink{classDocument_a66facb7706da5bbee80c309bc1fcc46c}{current\+Page\+Properties\+Changed}} ()
+\item 
+void \mbox{\hyperlink{classDocument_a022d2fee7a262a59b63eca3c41aecea5}{signal\+Update\+Item\+Geometry}} (QGraphics\+Item $\ast$)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classDocument_aaf54808cef06761d6e65579f45ba6161}{Document}} (QObject $\ast$parent)
+\item 
+\mbox{\hyperlink{classDocument_ac2e3f62307dc22baac21ddc10fa1609c}{$\sim$\+Document}} ()
+\item 
+\mbox{\hyperlink{classPaper}{Paper}} $\ast$ \mbox{\hyperlink{classDocument_a010f183c215f34344747871b589a13e6}{get\+Paper\+At}} (int position)
+\item 
+\mbox{\hyperlink{classPaper}{Paper}} $\ast$ \mbox{\hyperlink{classDocument_aeb0fc14df70e3a97282b1d540662613f}{get\+Current\+Page}} ()
+\item 
+void \mbox{\hyperlink{classDocument_a952f2669dbf656ca15096122e7ddc937}{append\+Page}} (const QPage\+Size \&page\+\_\+size, int res, QObject $\ast$parent)
+\item 
+\mbox{\hyperlink{classPaper}{Paper}} $\ast$ \mbox{\hyperlink{classDocument_a09b5d03dea43ad54a059cd680bf2aed2}{get\+Last\+Page}} ()
+\item 
+int \mbox{\hyperlink{classDocument_a366c1f11b79a5afe4fa58a529877e556}{get\+Document\+Length}} ()
+\item 
+void \mbox{\hyperlink{classDocument_a1b5dc0938b9b37876813238c1a0a944a}{apply\+Properties}} (const \mbox{\hyperlink{classPageProperties}{Page\+Properties}} \&properties, \mbox{\hyperlink{classSettingsScopeCombo_abedf5416f2f2c544406fa4a2e95a93a3}{Settings\+Scope\+Combo\+::\+Setup\+Scope}} properties\+Scope)
+\item 
+void \mbox{\hyperlink{classDocument_af4eada22dd386143b245d9f34c92d6bd}{clear\+All\+Pages}} ()
+\item 
+void \mbox{\hyperlink{classDocument_a211bc211960d5bbe60f442698f86d7a0}{create\+New\+Document}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classDocument_aaf54808cef06761d6e65579f45ba6161}\label{classDocument_aaf54808cef06761d6e65579f45ba6161}} 
+\index{Document@{Document}!Document@{Document}}
+\index{Document@{Document}!Document@{Document}}
+\doxysubsubsection{\texorpdfstring{Document()}{Document()}}
+{\footnotesize\ttfamily Document\+::\+Document (\begin{DoxyParamCaption}\item[{QObject $\ast$}]{parent }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+\mbox{\Hypertarget{classDocument_ac2e3f62307dc22baac21ddc10fa1609c}\label{classDocument_ac2e3f62307dc22baac21ddc10fa1609c}} 
+\index{Document@{Document}!````~Document@{$\sim$Document}}
+\index{````~Document@{$\sim$Document}!Document@{Document}}
+\doxysubsubsection{\texorpdfstring{$\sim$Document()}{~Document()}}
+{\footnotesize\ttfamily Document\+::$\sim$\+Document (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classDocument_afd831246ee3f719d8b9aa2091370a361}\label{classDocument_afd831246ee3f719d8b9aa2091370a361}} 
+\index{Document@{Document}!addPage@{addPage}}
+\index{addPage@{addPage}!Document@{Document}}
+\doxysubsubsection{\texorpdfstring{addPage}{addPage}}
+{\footnotesize\ttfamily void Document\+::add\+Page (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+Adds new page after the currently active page and sets it to current
+
+Adds new page after current one, switches to it \mbox{\Hypertarget{classDocument_a952f2669dbf656ca15096122e7ddc937}\label{classDocument_a952f2669dbf656ca15096122e7ddc937}} 
+\index{Document@{Document}!appendPage@{appendPage}}
+\index{appendPage@{appendPage}!Document@{Document}}
+\doxysubsubsection{\texorpdfstring{appendPage()}{appendPage()}}
+{\footnotesize\ttfamily void Document\+::append\+Page (\begin{DoxyParamCaption}\item[{const QPage\+Size \&}]{page\+\_\+size,  }\item[{int}]{res,  }\item[{QObject $\ast$}]{parent }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classDocument_a1b5dc0938b9b37876813238c1a0a944a}\label{classDocument_a1b5dc0938b9b37876813238c1a0a944a}} 
+\index{Document@{Document}!applyProperties@{applyProperties}}
+\index{applyProperties@{applyProperties}!Document@{Document}}
+\doxysubsubsection{\texorpdfstring{applyProperties()}{applyProperties()}}
+{\footnotesize\ttfamily void Document\+::apply\+Properties (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classPageProperties}{Page\+Properties}} \&}]{properties,  }\item[{\mbox{\hyperlink{classSettingsScopeCombo_abedf5416f2f2c544406fa4a2e95a93a3}{Settings\+Scope\+Combo\+::\+Setup\+Scope}}}]{properties\+Scope }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classDocument_af4eada22dd386143b245d9f34c92d6bd}\label{classDocument_af4eada22dd386143b245d9f34c92d6bd}} 
+\index{Document@{Document}!clearAllPages@{clearAllPages}}
+\index{clearAllPages@{clearAllPages}!Document@{Document}}
+\doxysubsubsection{\texorpdfstring{clearAllPages()}{clearAllPages()}}
+{\footnotesize\ttfamily void Document\+::clear\+All\+Pages (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Leaves only one blank page \mbox{\Hypertarget{classDocument_a211bc211960d5bbe60f442698f86d7a0}\label{classDocument_a211bc211960d5bbe60f442698f86d7a0}} 
+\index{Document@{Document}!createNewDocument@{createNewDocument}}
+\index{createNewDocument@{createNewDocument}!Document@{Document}}
+\doxysubsubsection{\texorpdfstring{createNewDocument()}{createNewDocument()}}
+{\footnotesize\ttfamily void Document\+::create\+New\+Document (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classDocument_a84288e90ad10c4ae41e3c62d68634208}\label{classDocument_a84288e90ad10c4ae41e3c62d68634208}} 
+\index{Document@{Document}!currentPageChanged@{currentPageChanged}}
+\index{currentPageChanged@{currentPageChanged}!Document@{Document}}
+\doxysubsubsection{\texorpdfstring{currentPageChanged}{currentPageChanged}}
+{\footnotesize\ttfamily void Document\+::current\+Page\+Changed (\begin{DoxyParamCaption}\item[{int}]{current\+Page }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+Signals that current page is changed to given number, and sets current page in document. \mbox{\Hypertarget{classDocument_a66facb7706da5bbee80c309bc1fcc46c}\label{classDocument_a66facb7706da5bbee80c309bc1fcc46c}} 
+\index{Document@{Document}!currentPagePropertiesChanged@{currentPagePropertiesChanged}}
+\index{currentPagePropertiesChanged@{currentPagePropertiesChanged}!Document@{Document}}
+\doxysubsubsection{\texorpdfstring{currentPagePropertiesChanged}{currentPagePropertiesChanged}}
+{\footnotesize\ttfamily void Document\+::current\+Page\+Properties\+Changed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+Signals that current page properties are changed. \mbox{\Hypertarget{classDocument_aa63a1bb71f546e43fa3ee6ead0c78176}\label{classDocument_aa63a1bb71f546e43fa3ee6ead0c78176}} 
+\index{Document@{Document}!deleteCurrentPage@{deleteCurrentPage}}
+\index{deleteCurrentPage@{deleteCurrentPage}!Document@{Document}}
+\doxysubsubsection{\texorpdfstring{deleteCurrentPage}{deleteCurrentPage}}
+{\footnotesize\ttfamily void Document\+::delete\+Current\+Page (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+Deletes current page, and sets it to previous or if the new document length is 0 then creates a new blank page \mbox{\Hypertarget{classDocument_a9c5d23675c52ff7bf7652ff0a2b9a9f1}\label{classDocument_a9c5d23675c52ff7bf7652ff0a2b9a9f1}} 
+\index{Document@{Document}!documentLengthChanged@{documentLengthChanged}}
+\index{documentLengthChanged@{documentLengthChanged}!Document@{Document}}
+\doxysubsubsection{\texorpdfstring{documentLengthChanged}{documentLengthChanged}}
+{\footnotesize\ttfamily void Document\+::document\+Length\+Changed (\begin{DoxyParamCaption}\item[{int}]{number }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+Signals that number of available pages changed \mbox{\Hypertarget{classDocument_aeb0fc14df70e3a97282b1d540662613f}\label{classDocument_aeb0fc14df70e3a97282b1d540662613f}} 
+\index{Document@{Document}!getCurrentPage@{getCurrentPage}}
+\index{getCurrentPage@{getCurrentPage}!Document@{Document}}
+\doxysubsubsection{\texorpdfstring{getCurrentPage()}{getCurrentPage()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classPaper}{Paper}} $\ast$ Document\+::get\+Current\+Page (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+position must be valid \mbox{\Hypertarget{classDocument_a366c1f11b79a5afe4fa58a529877e556}\label{classDocument_a366c1f11b79a5afe4fa58a529877e556}} 
+\index{Document@{Document}!getDocumentLength@{getDocumentLength}}
+\index{getDocumentLength@{getDocumentLength}!Document@{Document}}
+\doxysubsubsection{\texorpdfstring{getDocumentLength()}{getDocumentLength()}}
+{\footnotesize\ttfamily int Document\+::get\+Document\+Length (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classDocument_a09b5d03dea43ad54a059cd680bf2aed2}\label{classDocument_a09b5d03dea43ad54a059cd680bf2aed2}} 
+\index{Document@{Document}!getLastPage@{getLastPage}}
+\index{getLastPage@{getLastPage}!Document@{Document}}
+\doxysubsubsection{\texorpdfstring{getLastPage()}{getLastPage()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classPaper}{Paper}} $\ast$ Document\+::get\+Last\+Page (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classDocument_a010f183c215f34344747871b589a13e6}\label{classDocument_a010f183c215f34344747871b589a13e6}} 
+\index{Document@{Document}!getPaperAt@{getPaperAt}}
+\index{getPaperAt@{getPaperAt}!Document@{Document}}
+\doxysubsubsection{\texorpdfstring{getPaperAt()}{getPaperAt()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classPaper}{Paper}} $\ast$ Document\+::get\+Paper\+At (\begin{DoxyParamCaption}\item[{int}]{position }\end{DoxyParamCaption})}
+
+position must be valid. if the position exceedes length returns the last page, or first if position is negative \mbox{\Hypertarget{classDocument_a823325fd6bc08e36b3e2a44826d76258}\label{classDocument_a823325fd6bc08e36b3e2a44826d76258}} 
+\index{Document@{Document}!nextPage@{nextPage}}
+\index{nextPage@{nextPage}!Document@{Document}}
+\doxysubsubsection{\texorpdfstring{nextPage}{nextPage}}
+{\footnotesize\ttfamily void Document\+::next\+Page (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+Sets current\+Page to next page if it exists \mbox{\Hypertarget{classDocument_aabc940e84e5d9f8a7ba0559503d6a066}\label{classDocument_aabc940e84e5d9f8a7ba0559503d6a066}} 
+\index{Document@{Document}!prevPage@{prevPage}}
+\index{prevPage@{prevPage}!Document@{Document}}
+\doxysubsubsection{\texorpdfstring{prevPage}{prevPage}}
+{\footnotesize\ttfamily void Document\+::prev\+Page (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+Sets current\+Page to previous page if it exists \mbox{\Hypertarget{classDocument_aa171f391219bfa6a36b95281429fd674}\label{classDocument_aa171f391219bfa6a36b95281429fd674}} 
+\index{Document@{Document}!setCurrentPage@{setCurrentPage}}
+\index{setCurrentPage@{setCurrentPage}!Document@{Document}}
+\doxysubsubsection{\texorpdfstring{setCurrentPage}{setCurrentPage}}
+{\footnotesize\ttfamily void Document\+::set\+Current\+Page (\begin{DoxyParamCaption}\item[{int}]{number }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+Sets page that should be displayed. If the page doesn\textquotesingle{}t exist value is ignored. This is support for jumping pages.
+
+gets page number starting from 1 \mbox{\Hypertarget{classDocument_aad21af71e54b17dcef342dbb7de4e599}\label{classDocument_aad21af71e54b17dcef342dbb7de4e599}} 
+\index{Document@{Document}!signalFocusItemChanged@{signalFocusItemChanged}}
+\index{signalFocusItemChanged@{signalFocusItemChanged}!Document@{Document}}
+\doxysubsubsection{\texorpdfstring{signalFocusItemChanged}{signalFocusItemChanged}}
+{\footnotesize\ttfamily void Document\+::signal\+Focus\+Item\+Changed (\begin{DoxyParamCaption}\item[{QGraphics\+Item $\ast$}]{new\+Focus\+Item,  }\item[{QGraphics\+Item $\ast$}]{old\+Focus\+Item,  }\item[{Qt\+::\+Focus\+Reason}]{reason }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+Propagates from paper \mbox{\Hypertarget{classDocument_a4ee71b50326acdf8a4d3bbb0eb9a4c94}\label{classDocument_a4ee71b50326acdf8a4d3bbb0eb9a4c94}} 
+\index{Document@{Document}!signalItemRemoved@{signalItemRemoved}}
+\index{signalItemRemoved@{signalItemRemoved}!Document@{Document}}
+\doxysubsubsection{\texorpdfstring{signalItemRemoved}{signalItemRemoved}}
+{\footnotesize\ttfamily void Document\+::signal\+Item\+Removed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+Propagates from paper \mbox{\Hypertarget{classDocument_a022d2fee7a262a59b63eca3c41aecea5}\label{classDocument_a022d2fee7a262a59b63eca3c41aecea5}} 
+\index{Document@{Document}!signalUpdateItemGeometry@{signalUpdateItemGeometry}}
+\index{signalUpdateItemGeometry@{signalUpdateItemGeometry}!Document@{Document}}
+\doxysubsubsection{\texorpdfstring{signalUpdateItemGeometry}{signalUpdateItemGeometry}}
+{\footnotesize\ttfamily void Document\+::signal\+Update\+Item\+Geometry (\begin{DoxyParamCaption}\item[{QGraphics\+Item $\ast$}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+\mbox{\Hypertarget{classDocument_a7d562298174032ef3b7e1eedbc4f2c58}\label{classDocument_a7d562298174032ef3b7e1eedbc4f2c58}} 
+\index{Document@{Document}!slotFocusItemChanged@{slotFocusItemChanged}}
+\index{slotFocusItemChanged@{slotFocusItemChanged}!Document@{Document}}
+\doxysubsubsection{\texorpdfstring{slotFocusItemChanged}{slotFocusItemChanged}}
+{\footnotesize\ttfamily void Document\+::slot\+Focus\+Item\+Changed (\begin{DoxyParamCaption}\item[{QGraphics\+Item $\ast$}]{new\+Focus\+Item,  }\item[{QGraphics\+Item $\ast$}]{old\+Focus\+Item,  }\item[{Qt\+::\+Focus\+Reason}]{reason }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [slot]}}
+
+Propagates from paper \mbox{\Hypertarget{classDocument_a908cf08562e053287b6ed04fdd6ed07e}\label{classDocument_a908cf08562e053287b6ed04fdd6ed07e}} 
+\index{Document@{Document}!slotItemRemoved@{slotItemRemoved}}
+\index{slotItemRemoved@{slotItemRemoved}!Document@{Document}}
+\doxysubsubsection{\texorpdfstring{slotItemRemoved}{slotItemRemoved}}
+{\footnotesize\ttfamily void Document\+::slot\+Item\+Removed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [slot]}}
+
+Propagates from paper \mbox{\Hypertarget{classDocument_a7ddafb99acf42036f6de56144a682491}\label{classDocument_a7ddafb99acf42036f6de56144a682491}} 
+\index{Document@{Document}!slotToggleGridVisibility@{slotToggleGridVisibility}}
+\index{slotToggleGridVisibility@{slotToggleGridVisibility}!Document@{Document}}
+\doxysubsubsection{\texorpdfstring{slotToggleGridVisibility}{slotToggleGridVisibility}}
+{\footnotesize\ttfamily void Document\+::slot\+Toggle\+Grid\+Visibility (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+\mbox{\Hypertarget{classDocument_a59775bb7e4a32c7ea787c5aca081e033}\label{classDocument_a59775bb7e4a32c7ea787c5aca081e033}} 
+\index{Document@{Document}!slotUpdateItemGeometry@{slotUpdateItemGeometry}}
+\index{slotUpdateItemGeometry@{slotUpdateItemGeometry}!Document@{Document}}
+\doxysubsubsection{\texorpdfstring{slotUpdateItemGeometry}{slotUpdateItemGeometry}}
+{\footnotesize\ttfamily void Document\+::slot\+Update\+Item\+Geometry (\begin{DoxyParamCaption}\item[{QGraphics\+Item $\ast$}]{item }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/gui/\mbox{\hyperlink{document_8h}{document.\+h}}\item 
+src/gui/\mbox{\hyperlink{document_8cpp}{document.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,277 @@
+\hypertarget{classPaper}{}\doxysection{Paper Class Reference}
+\label{classPaper}\index{Paper@{Paper}}
+
+
+{\ttfamily \#include $<$paper.\+h$>$}
+
+
+
+Inheritance diagram for Paper\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=176pt]{classPaper__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Paper\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=176pt]{classPaper__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Slots}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classPaper_af4d8473701774896f63eb93923afc76e}{update\+Item\+Geometry}} (QGraphics\+Item $\ast$)
+\end{DoxyCompactItemize}
+\doxysubsection*{Signals}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classPaper_ad6a103e3d12f5f64a54b108f6f00da6c}{signal\+Page\+Size\+Changed}} (QSizeF new\+Size)
+\item 
+void \mbox{\hyperlink{classPaper_abb16fd0d8e38e972eca1bdb1b17b3f2f}{item\+Removed}} ()
+\item 
+void \mbox{\hyperlink{classPaper_a1008f654754203cf6ff3f9c4c2979830}{signal\+Set\+Grid\+Visibility}} (bool is\+Visible)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classPaper_a64b6fe05669b44d6b8692b46c6da8b45}{Paper}} (QObject $\ast$parent=nullptr)
+\item 
+\mbox{\hyperlink{classPaper_a069afdd2f2bb49e8a716cccdd40e21e3}{Paper}} (const QPage\+Size \&page\+\_\+size=QPage\+Size\+::\+A4, int res=300, QObject $\ast$parent=nullptr)
+\item 
+\mbox{\hyperlink{classPaper_a54047bcd1ffeb6cfd87f6b7612a85baa}{Paper}} (QRectF rect, QObject $\ast$parent)
+\item 
+QRectF \mbox{\hyperlink{classPaper_a9f184b5cbcc2c597ac0508ec3c6957bf}{get\+Paper\+Rect}} () const
+\item 
+void \mbox{\hyperlink{classPaper_a6cca3f1c04876f013d3f16ad821d7234}{set\+Paper\+Rect}} (QRectF new\+Rect)
+\item 
+void \mbox{\hyperlink{classPaper_aa7510b146593be2a4f065e9ab9b0412a}{apply\+Properties}} (const \mbox{\hyperlink{classPageProperties}{Page\+Properties}} \&page\+Properties)
+\item 
+int \mbox{\hyperlink{classPaper_a6b091c8c359d34c75f6da463a7ed64f9}{get\+Res}} () const
+\item 
+void \mbox{\hyperlink{classPaper_a89ed422e24280e798bd628464fd53c5c}{set\+Res}} (int new\+Res)
+\item 
+double \mbox{\hyperlink{classPaper_a7ee14e8a011679a3d76419b50f1af900}{get\+Margin\+Top}} () const
+\item 
+void \mbox{\hyperlink{classPaper_a7e78946cbe71ba3315dfb6f4085b45c1}{set\+Margin\+Top}} (double new\+Margin\+Top)
+\item 
+double \mbox{\hyperlink{classPaper_af05ddf7dcbe0311a3487242a27fe0842}{get\+Margin\+Bottom}} () const
+\item 
+void \mbox{\hyperlink{classPaper_a66f673f8709d09f50ec1870bd0aa35b2}{set\+Margin\+Bottom}} (double new\+Margin\+Bottom)
+\item 
+double \mbox{\hyperlink{classPaper_a0bf77c4a781118a8e31c366ffe2975b7}{get\+Margin\+Left}} () const
+\item 
+void \mbox{\hyperlink{classPaper_a5b445f3a173431b97568972382fd1013}{set\+Margin\+Left}} (double new\+Margin\+Left)
+\item 
+double \mbox{\hyperlink{classPaper_a6bea4ef5d1d21340768f630ceafcf7e2}{get\+Margin\+Right}} () const
+\item 
+void \mbox{\hyperlink{classPaper_ae4c21f237621576795cb3a98d8560fdc}{set\+Margin\+Right}} (double new\+Margin\+Right)
+\item 
+const QPage\+Size \& \mbox{\hyperlink{classPaper_a6c38e2f0b1a2b8248616f18053ac6173}{get\+Page\+Size}} () const
+\item 
+void \mbox{\hyperlink{classPaper_a31dfd479512b6ea14a35739fd8fe3e0a}{set\+Page\+Size}} (const QPage\+Size \&new\+Page\+Size)
+\item 
+void \mbox{\hyperlink{classPaper_a6207c9de17f7830c1af596b5373472df}{redraw\+Paper}} (double new\+RatioX, double new\+RatioY)
+\item 
+void \mbox{\hyperlink{classPaper_a2c2cb4f42427266ec6cb9bd592ba78dc}{context\+Menu\+Event}} (QGraphics\+Scene\+Context\+Menu\+Event $\ast$event)
+\item 
+void \mbox{\hyperlink{classPaper_aa956518a8b5c0d5f0d44046727f9c788}{set\+Grid\+Visibility}} (bool is\+Visible)
+\item 
+void \mbox{\hyperlink{classPaper_a71c948a1c5ae2d5e97b51484ccbea1a5}{move\+Item\+Within\+Bounds}} (QGraphics\+Item $\ast$item)
+\item 
+void \mbox{\hyperlink{classPaper_a86ef887a2c8baa7fb7e51b535159b897}{resize\+Item\+To\+Fit}} (QGraphics\+Item $\ast$item)
+\item 
+\mbox{\hyperlink{classPageGrid}{Page\+Grid}} $\ast$ \mbox{\hyperlink{classPaper_a0945bcbcaa7fa8af6da369f67600ee4d}{get\+Page\+Grid}} () const
+\item 
+int \mbox{\hyperlink{classPaper_af0f7df9c984567f1cd420be347a8ff29}{from\+MMto\+Pixel}} (double mm)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classPaper_a64b6fe05669b44d6b8692b46c6da8b45}\label{classPaper_a64b6fe05669b44d6b8692b46c6da8b45}} 
+\index{Paper@{Paper}!Paper@{Paper}}
+\index{Paper@{Paper}!Paper@{Paper}}
+\doxysubsubsection{\texorpdfstring{Paper()}{Paper()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily Paper\+::\+Paper (\begin{DoxyParamCaption}\item[{QObject $\ast$}]{parent = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+\mbox{\Hypertarget{classPaper_a069afdd2f2bb49e8a716cccdd40e21e3}\label{classPaper_a069afdd2f2bb49e8a716cccdd40e21e3}} 
+\index{Paper@{Paper}!Paper@{Paper}}
+\index{Paper@{Paper}!Paper@{Paper}}
+\doxysubsubsection{\texorpdfstring{Paper()}{Paper()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily Paper\+::\+Paper (\begin{DoxyParamCaption}\item[{const QPage\+Size \&}]{page\+\_\+size = {\ttfamily QPageSize\+:\+:A4},  }\item[{int}]{res = {\ttfamily 300},  }\item[{QObject $\ast$}]{parent = {\ttfamily nullptr} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classPaper_a54047bcd1ffeb6cfd87f6b7612a85baa}\label{classPaper_a54047bcd1ffeb6cfd87f6b7612a85baa}} 
+\index{Paper@{Paper}!Paper@{Paper}}
+\index{Paper@{Paper}!Paper@{Paper}}
+\doxysubsubsection{\texorpdfstring{Paper()}{Paper()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily Paper\+::\+Paper (\begin{DoxyParamCaption}\item[{QRectF}]{rect,  }\item[{QObject $\ast$}]{parent }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classPaper_aa7510b146593be2a4f065e9ab9b0412a}\label{classPaper_aa7510b146593be2a4f065e9ab9b0412a}} 
+\index{Paper@{Paper}!applyProperties@{applyProperties}}
+\index{applyProperties@{applyProperties}!Paper@{Paper}}
+\doxysubsubsection{\texorpdfstring{applyProperties()}{applyProperties()}}
+{\footnotesize\ttfamily void Paper\+::apply\+Properties (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classPageProperties}{Page\+Properties}} \&}]{page\+Properties }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classPaper_a2c2cb4f42427266ec6cb9bd592ba78dc}\label{classPaper_a2c2cb4f42427266ec6cb9bd592ba78dc}} 
+\index{Paper@{Paper}!contextMenuEvent@{contextMenuEvent}}
+\index{contextMenuEvent@{contextMenuEvent}!Paper@{Paper}}
+\doxysubsubsection{\texorpdfstring{contextMenuEvent()}{contextMenuEvent()}}
+{\footnotesize\ttfamily void Paper\+::context\+Menu\+Event (\begin{DoxyParamCaption}\item[{QGraphics\+Scene\+Context\+Menu\+Event $\ast$}]{event }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classPaper_af0f7df9c984567f1cd420be347a8ff29}\label{classPaper_af0f7df9c984567f1cd420be347a8ff29}} 
+\index{Paper@{Paper}!fromMMtoPixel@{fromMMtoPixel}}
+\index{fromMMtoPixel@{fromMMtoPixel}!Paper@{Paper}}
+\doxysubsubsection{\texorpdfstring{fromMMtoPixel()}{fromMMtoPixel()}}
+{\footnotesize\ttfamily int Paper\+::from\+MMto\+Pixel (\begin{DoxyParamCaption}\item[{double}]{mm }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classPaper_af05ddf7dcbe0311a3487242a27fe0842}\label{classPaper_af05ddf7dcbe0311a3487242a27fe0842}} 
+\index{Paper@{Paper}!getMarginBottom@{getMarginBottom}}
+\index{getMarginBottom@{getMarginBottom}!Paper@{Paper}}
+\doxysubsubsection{\texorpdfstring{getMarginBottom()}{getMarginBottom()}}
+{\footnotesize\ttfamily double Paper\+::get\+Margin\+Bottom (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classPaper_a0bf77c4a781118a8e31c366ffe2975b7}\label{classPaper_a0bf77c4a781118a8e31c366ffe2975b7}} 
+\index{Paper@{Paper}!getMarginLeft@{getMarginLeft}}
+\index{getMarginLeft@{getMarginLeft}!Paper@{Paper}}
+\doxysubsubsection{\texorpdfstring{getMarginLeft()}{getMarginLeft()}}
+{\footnotesize\ttfamily double Paper\+::get\+Margin\+Left (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classPaper_a6bea4ef5d1d21340768f630ceafcf7e2}\label{classPaper_a6bea4ef5d1d21340768f630ceafcf7e2}} 
+\index{Paper@{Paper}!getMarginRight@{getMarginRight}}
+\index{getMarginRight@{getMarginRight}!Paper@{Paper}}
+\doxysubsubsection{\texorpdfstring{getMarginRight()}{getMarginRight()}}
+{\footnotesize\ttfamily double Paper\+::get\+Margin\+Right (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classPaper_a7ee14e8a011679a3d76419b50f1af900}\label{classPaper_a7ee14e8a011679a3d76419b50f1af900}} 
+\index{Paper@{Paper}!getMarginTop@{getMarginTop}}
+\index{getMarginTop@{getMarginTop}!Paper@{Paper}}
+\doxysubsubsection{\texorpdfstring{getMarginTop()}{getMarginTop()}}
+{\footnotesize\ttfamily double Paper\+::get\+Margin\+Top (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classPaper_a0945bcbcaa7fa8af6da369f67600ee4d}\label{classPaper_a0945bcbcaa7fa8af6da369f67600ee4d}} 
+\index{Paper@{Paper}!getPageGrid@{getPageGrid}}
+\index{getPageGrid@{getPageGrid}!Paper@{Paper}}
+\doxysubsubsection{\texorpdfstring{getPageGrid()}{getPageGrid()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classPageGrid}{Page\+Grid}} $\ast$ Paper\+::get\+Page\+Grid (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classPaper_a6c38e2f0b1a2b8248616f18053ac6173}\label{classPaper_a6c38e2f0b1a2b8248616f18053ac6173}} 
+\index{Paper@{Paper}!getPageSize@{getPageSize}}
+\index{getPageSize@{getPageSize}!Paper@{Paper}}
+\doxysubsubsection{\texorpdfstring{getPageSize()}{getPageSize()}}
+{\footnotesize\ttfamily const QPage\+Size \& Paper\+::get\+Page\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classPaper_a9f184b5cbcc2c597ac0508ec3c6957bf}\label{classPaper_a9f184b5cbcc2c597ac0508ec3c6957bf}} 
+\index{Paper@{Paper}!getPaperRect@{getPaperRect}}
+\index{getPaperRect@{getPaperRect}!Paper@{Paper}}
+\doxysubsubsection{\texorpdfstring{getPaperRect()}{getPaperRect()}}
+{\footnotesize\ttfamily QRectF Paper\+::get\+Paper\+Rect (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classPaper_a6b091c8c359d34c75f6da463a7ed64f9}\label{classPaper_a6b091c8c359d34c75f6da463a7ed64f9}} 
+\index{Paper@{Paper}!getRes@{getRes}}
+\index{getRes@{getRes}!Paper@{Paper}}
+\doxysubsubsection{\texorpdfstring{getRes()}{getRes()}}
+{\footnotesize\ttfamily int Paper\+::get\+Res (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classPaper_abb16fd0d8e38e972eca1bdb1b17b3f2f}\label{classPaper_abb16fd0d8e38e972eca1bdb1b17b3f2f}} 
+\index{Paper@{Paper}!itemRemoved@{itemRemoved}}
+\index{itemRemoved@{itemRemoved}!Paper@{Paper}}
+\doxysubsubsection{\texorpdfstring{itemRemoved}{itemRemoved}}
+{\footnotesize\ttfamily void Paper\+::item\+Removed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+\mbox{\Hypertarget{classPaper_a71c948a1c5ae2d5e97b51484ccbea1a5}\label{classPaper_a71c948a1c5ae2d5e97b51484ccbea1a5}} 
+\index{Paper@{Paper}!moveItemWithinBounds@{moveItemWithinBounds}}
+\index{moveItemWithinBounds@{moveItemWithinBounds}!Paper@{Paper}}
+\doxysubsubsection{\texorpdfstring{moveItemWithinBounds()}{moveItemWithinBounds()}}
+{\footnotesize\ttfamily void Paper\+::move\+Item\+Within\+Bounds (\begin{DoxyParamCaption}\item[{QGraphics\+Item $\ast$}]{item }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classPaper_a6207c9de17f7830c1af596b5373472df}\label{classPaper_a6207c9de17f7830c1af596b5373472df}} 
+\index{Paper@{Paper}!redrawPaper@{redrawPaper}}
+\index{redrawPaper@{redrawPaper}!Paper@{Paper}}
+\doxysubsubsection{\texorpdfstring{redrawPaper()}{redrawPaper()}}
+{\footnotesize\ttfamily void Paper\+::redraw\+Paper (\begin{DoxyParamCaption}\item[{double}]{new\+RatioX,  }\item[{double}]{new\+RatioY }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classPaper_a86ef887a2c8baa7fb7e51b535159b897}\label{classPaper_a86ef887a2c8baa7fb7e51b535159b897}} 
+\index{Paper@{Paper}!resizeItemToFit@{resizeItemToFit}}
+\index{resizeItemToFit@{resizeItemToFit}!Paper@{Paper}}
+\doxysubsubsection{\texorpdfstring{resizeItemToFit()}{resizeItemToFit()}}
+{\footnotesize\ttfamily void Paper\+::resize\+Item\+To\+Fit (\begin{DoxyParamCaption}\item[{QGraphics\+Item $\ast$}]{item }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classPaper_aa956518a8b5c0d5f0d44046727f9c788}\label{classPaper_aa956518a8b5c0d5f0d44046727f9c788}} 
+\index{Paper@{Paper}!setGridVisibility@{setGridVisibility}}
+\index{setGridVisibility@{setGridVisibility}!Paper@{Paper}}
+\doxysubsubsection{\texorpdfstring{setGridVisibility()}{setGridVisibility()}}
+{\footnotesize\ttfamily void Paper\+::set\+Grid\+Visibility (\begin{DoxyParamCaption}\item[{bool}]{is\+Visible }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classPaper_a66f673f8709d09f50ec1870bd0aa35b2}\label{classPaper_a66f673f8709d09f50ec1870bd0aa35b2}} 
+\index{Paper@{Paper}!setMarginBottom@{setMarginBottom}}
+\index{setMarginBottom@{setMarginBottom}!Paper@{Paper}}
+\doxysubsubsection{\texorpdfstring{setMarginBottom()}{setMarginBottom()}}
+{\footnotesize\ttfamily void Paper\+::set\+Margin\+Bottom (\begin{DoxyParamCaption}\item[{double}]{new\+Margin\+Bottom }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classPaper_a5b445f3a173431b97568972382fd1013}\label{classPaper_a5b445f3a173431b97568972382fd1013}} 
+\index{Paper@{Paper}!setMarginLeft@{setMarginLeft}}
+\index{setMarginLeft@{setMarginLeft}!Paper@{Paper}}
+\doxysubsubsection{\texorpdfstring{setMarginLeft()}{setMarginLeft()}}
+{\footnotesize\ttfamily void Paper\+::set\+Margin\+Left (\begin{DoxyParamCaption}\item[{double}]{new\+Margin\+Left }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classPaper_ae4c21f237621576795cb3a98d8560fdc}\label{classPaper_ae4c21f237621576795cb3a98d8560fdc}} 
+\index{Paper@{Paper}!setMarginRight@{setMarginRight}}
+\index{setMarginRight@{setMarginRight}!Paper@{Paper}}
+\doxysubsubsection{\texorpdfstring{setMarginRight()}{setMarginRight()}}
+{\footnotesize\ttfamily void Paper\+::set\+Margin\+Right (\begin{DoxyParamCaption}\item[{double}]{new\+Margin\+Right }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classPaper_a7e78946cbe71ba3315dfb6f4085b45c1}\label{classPaper_a7e78946cbe71ba3315dfb6f4085b45c1}} 
+\index{Paper@{Paper}!setMarginTop@{setMarginTop}}
+\index{setMarginTop@{setMarginTop}!Paper@{Paper}}
+\doxysubsubsection{\texorpdfstring{setMarginTop()}{setMarginTop()}}
+{\footnotesize\ttfamily void Paper\+::set\+Margin\+Top (\begin{DoxyParamCaption}\item[{double}]{new\+Margin\+Top }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classPaper_a31dfd479512b6ea14a35739fd8fe3e0a}\label{classPaper_a31dfd479512b6ea14a35739fd8fe3e0a}} 
+\index{Paper@{Paper}!setPageSize@{setPageSize}}
+\index{setPageSize@{setPageSize}!Paper@{Paper}}
+\doxysubsubsection{\texorpdfstring{setPageSize()}{setPageSize()}}
+{\footnotesize\ttfamily void Paper\+::set\+Page\+Size (\begin{DoxyParamCaption}\item[{const QPage\+Size \&}]{new\+Page\+Size }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classPaper_a6cca3f1c04876f013d3f16ad821d7234}\label{classPaper_a6cca3f1c04876f013d3f16ad821d7234}} 
+\index{Paper@{Paper}!setPaperRect@{setPaperRect}}
+\index{setPaperRect@{setPaperRect}!Paper@{Paper}}
+\doxysubsubsection{\texorpdfstring{setPaperRect()}{setPaperRect()}}
+{\footnotesize\ttfamily void Paper\+::set\+Paper\+Rect (\begin{DoxyParamCaption}\item[{QRectF}]{new\+Rect }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classPaper_a89ed422e24280e798bd628464fd53c5c}\label{classPaper_a89ed422e24280e798bd628464fd53c5c}} 
+\index{Paper@{Paper}!setRes@{setRes}}
+\index{setRes@{setRes}!Paper@{Paper}}
+\doxysubsubsection{\texorpdfstring{setRes()}{setRes()}}
+{\footnotesize\ttfamily void Paper\+::set\+Res (\begin{DoxyParamCaption}\item[{int}]{new\+Res }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classPaper_ad6a103e3d12f5f64a54b108f6f00da6c}\label{classPaper_ad6a103e3d12f5f64a54b108f6f00da6c}} 
+\index{Paper@{Paper}!signalPageSizeChanged@{signalPageSizeChanged}}
+\index{signalPageSizeChanged@{signalPageSizeChanged}!Paper@{Paper}}
+\doxysubsubsection{\texorpdfstring{signalPageSizeChanged}{signalPageSizeChanged}}
+{\footnotesize\ttfamily void Paper\+::signal\+Page\+Size\+Changed (\begin{DoxyParamCaption}\item[{QSizeF}]{new\+Size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+\mbox{\Hypertarget{classPaper_a1008f654754203cf6ff3f9c4c2979830}\label{classPaper_a1008f654754203cf6ff3f9c4c2979830}} 
+\index{Paper@{Paper}!signalSetGridVisibility@{signalSetGridVisibility}}
+\index{signalSetGridVisibility@{signalSetGridVisibility}!Paper@{Paper}}
+\doxysubsubsection{\texorpdfstring{signalSetGridVisibility}{signalSetGridVisibility}}
+{\footnotesize\ttfamily void Paper\+::signal\+Set\+Grid\+Visibility (\begin{DoxyParamCaption}\item[{bool}]{is\+Visible }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+\mbox{\Hypertarget{classPaper_af4d8473701774896f63eb93923afc76e}\label{classPaper_af4d8473701774896f63eb93923afc76e}} 
+\index{Paper@{Paper}!updateItemGeometry@{updateItemGeometry}}
+\index{updateItemGeometry@{updateItemGeometry}!Paper@{Paper}}
+\doxysubsubsection{\texorpdfstring{updateItemGeometry}{updateItemGeometry}}
+{\footnotesize\ttfamily void Paper\+::update\+Item\+Geometry (\begin{DoxyParamCaption}\item[{QGraphics\+Item $\ast$}]{item }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/gui/\mbox{\hyperlink{paper_8h}{paper.\+h}}\item 
+src/gui/\mbox{\hyperlink{paper_8cpp}{paper.\+cpp}}\end{DoxyCompactItemize}
