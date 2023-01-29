@@ -1,6 +1,3 @@
 #include "slider.h"
 
-Slider::Slider(SliderType sliderType)
-{
-
-}
+Slider::Slider(SliderType sliderType) {}
