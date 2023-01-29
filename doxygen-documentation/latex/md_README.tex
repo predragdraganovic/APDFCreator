@@ -1,0 +1,25 @@
+APDFCreator is an app designed to provide an easy way to create academic PDF documents using the WYSIWYG principle. It is still a work in progress and currently supports adding text, images and formulae in La\+TeX format.\hypertarget{md_README_autotoc_md1}{}\doxysection{Dependencies}\label{md_README_autotoc_md1}
+This app requires {\bfseries{latex}} and {\bfseries{dvipng}} packages to be installed on the system.
+
+You can set up La\+TeX support on your Ubuntu installation by running\+:
+
+{\ttfamily sudo apt install texlive-\/full}
+
+On Windows, you can download and install the free \href{https://miktex.org/}{\texttt{ Mi\+KTeX}} TeX distribution.
+
+Make sure to add {\bfseries{latex}} and {\bfseries{dvipng}} packages to your {\itshape PATH} environment variable.\hypertarget{md_README_autotoc_md2}{}\doxysubsection{Note\+:}\label{md_README_autotoc_md2}
+You will need to install the packages required by La\+TeX upon first starting the APDFCreator. ~\newline
+\hypertarget{md_README_autotoc_md3}{}\doxysection{Building}\label{md_README_autotoc_md3}
+Download and install Qt 6.\+2.\+1 library (along with Qt Creator)
+
+Position into the desired directory and clone the repository.
+
+Open the project by opening the {\ttfamily CMake\+Lists.\+txt} file, and click on {\bfseries{Configure project}}.
+
+Change the build mode to {\bfseries{Release}} and start building using the {\bfseries{Build-\/$>$Build Project \char`\"{}\+APDF Creator\char`\"{}}}
+
+Move the built .exe file from build folder to a new one and run {\itshape path\+To\+Your\+Qt\+Directory/windeployqt.\+exe path\+To\+APDFCreator\+Exe/\+APDFCreator.\+exe}
+
+Copy {\bfseries{libstdc++-\/6.dll}}, {\bfseries{libgcc\+\_\+s\+\_\+seh-\/1.\+dll}} and {\bfseries{libwinpthread-\/1.\+dll}} alongside APDFCreator.\+exe.
+
+Building process completed. 
