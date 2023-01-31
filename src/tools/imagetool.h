@@ -33,8 +33,8 @@ public:
 
 private:
     qreal image_scale = 1;
-    int originalWidth;
-    int originalHeight;
+    int originalWidth = 0;
+    int originalHeight = 0;
     QPixmap originalPixmap;
 };
 

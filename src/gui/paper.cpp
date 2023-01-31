@@ -17,7 +17,6 @@ Paper::Paper(const QPageSize &page_size, int res, QObject *parent) : QGraphicsSc
     setPageSize(page_size);
     QSize pagePixel = QPageSize::sizePixels(page_size.id(), res);
     paperRectangle  = QRectF(0, 0, pagePixel.width(), pagePixel.height());
-    Paper(paperRectangle, parent);
     drawPaper();
     this->setSceneRect(paperRectangle);
     marginBottom   = 0.0;

@@ -16,7 +16,7 @@ class TextTool : public QGraphicsTextItem
 {
 public:
     TextTool();
-    TextTool(int size, QGraphicsItem *parent = nullptr);
+    explicit TextTool(int size, QGraphicsItem *parent = nullptr);
     ~TextTool(){};
 
     void focusOutEvent(QFocusEvent* event) override;

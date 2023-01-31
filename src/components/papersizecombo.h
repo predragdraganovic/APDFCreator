@@ -10,7 +10,7 @@
 class PaperSizeCombo : public QListWidget
 {
 public:
-    PaperSizeCombo(const QPageSize& currentSize);
+    explicit PaperSizeCombo(const QPageSize& currentSize);
 
     QPageSize getSelectedPageSize();
 

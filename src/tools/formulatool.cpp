@@ -13,14 +13,7 @@ FormulaTool::FormulaTool()
     setFlags(QGraphicsItem::ItemIsMovable);
 }
 
-FormulaTool::FormulaTool(const QString &latex, int res)
-{
-    latexString = latex;
-    latexRes    = res;
 
-    setPixmap(updateImage(latexRes, latexString));
-    setFlags(QGraphicsItem::ItemIsMovable);
-}
 
 bool FormulaTool::sceneEvent(QEvent *event)
 {
