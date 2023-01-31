@@ -17,7 +17,13 @@ public:
     };
 
     FormulaTool();
-    FormulaTool(const QString& latex, int res);
+    FormulaTool(const QString& latex, int res): latexString(latex)
+    {
+        latexRes    = res;
+
+        setPixmap(updateImage(latexRes, latexString));
+        setFlags(QGraphicsItem::ItemIsMovable);
+    }
 
     bool sceneEvent(QEvent *event) override;
     QPixmap updateImage(int latexRes, const QString& latexString);

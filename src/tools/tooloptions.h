@@ -47,9 +47,9 @@ private:
 
     QSlider* scaleSelector = nullptr;
 
-    int itemType;
-    int paperWidth;
-    int paperHeight;
+    int itemType=0;
+    int paperWidth=0;
+    int paperHeight=0;
 
     void setTextToolOptions(TextTool&);
     void setImageToolOptions(ImageTool&);

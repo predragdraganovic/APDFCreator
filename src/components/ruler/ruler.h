@@ -25,7 +25,7 @@ public:
     enum RulerOrientation {VERTICAL, HORIZONTAL};
     Q_ENUM(RulerOrientation)
 
-    Ruler(RulerOrientation orientation, QPageSize pageSize = QPageSize::A4, int res = 300);
+    explicit Ruler(RulerOrientation orientation, QPageSize pageSize = QPageSize::A4, int res = 300);
 
 private:
     /** size of the paper */

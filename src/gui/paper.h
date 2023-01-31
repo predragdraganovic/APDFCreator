@@ -74,15 +74,15 @@ signals:
 
 private:
     QRectF paperRectangle;
-    QGraphicsRectItem* rectItem;
+    QGraphicsRectItem* rectItem = nullptr;
     QPageSize pageSize;
-    PageGrid *pageGrid;
+    PageGrid *pageGrid = nullptr;
 
-    int res;
-    double marginTop;
-    double marginBottom;
-    double marginLeft;
-    double marginRight;
+    int res = 0;
+    double marginTop = 0;
+    double marginBottom = 0;
+    double marginLeft = 0;
+    double marginRight = 0;
 
 
     void drawPaper();
