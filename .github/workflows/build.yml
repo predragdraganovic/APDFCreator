@@ -1,0 +1,75 @@
+name: build  
+
+on:
+  push:
+    branches: '**'
+
+env:
+  # (Release, Debug)
+  BUILD_TYPE: Debug
+  CLANG_TIDY: OFF
+
+jobs:
+  build-unix:
+  
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Install dependencies
+      run:  sudo apt-get update && sudo apt-get install cmake build-essential libgl1-mesa-dev qt6-base-dev texlive-latex-extra dvipng
+      
+    - uses: actions/checkout@v2
+
+    - name: Create Build Environment
+    
+      run: cmake -E make_directory ${{github.workspace}}/build
+
+    - name: Configure CMake
+    
+      shell: bash
+      working-directory: ${{github.workspace}}/build
+      
+      run: cmake ${{github.workspace}}/src -DCLANG_TIDY=OFF
+
+    - name: Build
+      working-directory: ${{github.workspace}}/build
+      shell: bash
+      
+      run: make
+
+  build-windows:
+    runs-on: windows-latest
+
+    steps:
+    - uses: jurplel/install-qt-action@v3
+      with:
+        aqtversion: '==2.1.*'
+        version: '6.1.2'
+        host: 'windows'
+        target: 'desktop'
+        arch: 'win64_mingw81'
+        setup-python: 'false'
+        install-deps: 'true'
+        tools: 'tools_cmake'     
+        set-env: 'true'
+        tools-only: 'false'
+
+    - uses: actions/checkout@v2
+    - name: Create Build Environment
+      env:
+        CMAKE_PREFIX_PATH: ${{env.Qt5_Dir}}
+    
+      run: cmake -E make_directory ${{github.workspace}}/build
+
+    - name: Configure CMake
+    
+      shell: bash
+      working-directory: ${{github.workspace}}/build
+      
+      run: cmake -G Ninja $GITHUB_WORKSPACE/src -DCLANG_TIDY=OFF
+
+    - name: Build
+      working-directory: ${{github.workspace}}/build
+      shell: bash
+      
+      run: cmake --build . --config ${{env.BUILD_TYPE}}
