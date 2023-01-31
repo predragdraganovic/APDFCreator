@@ -10,7 +10,7 @@ This app requires **latex** and **dvipng** packages to be installed on the syste
 
 You can set up LaTeX support on your Ubuntu installation by running:
 
-`sudo apt install texlive-full`
+`sudo apt install texlive-latex-extra dvipng`
 
 On Windows, you can download and install the free [MiKTeX](https://miktex.org/) TeX distribution.
 
