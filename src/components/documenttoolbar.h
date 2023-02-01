@@ -14,6 +14,11 @@ class DocumentToolbar : public QToolBar
     Q_OBJECT
 public:
     DocumentToolbar();
+    ~DocumentToolbar(){
+        delete toggleGridAction;
+        delete insertNewPage;
+        delete deletePageAction;
+    }
 
 public slots:
     void on_toggleGridAction_triggered();

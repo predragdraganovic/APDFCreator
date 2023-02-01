@@ -77,6 +77,16 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent), ui(new Ui::MainWi
     connect(document, SIGNAL(signalItemRemoved()), this, SLOT(removeToolOptions()));
 }
 
+MainWindow::~MainWindow()
+{
+    delete toolOpts;
+    delete io;
+    delete toolbar;
+    delete pageController;
+    delete document;
+    delete ui;
+}
+
 // TODO: refactor/split
 void MainWindow::initRulers()
 {
@@ -130,7 +140,6 @@ void MainWindow::resetPageViewScale()
     setViewScale(currentPage->getPageSize());
 }
 
-MainWindow::~MainWindow() { delete ui; }
 
 // Redefining mainwindow events in order to resize paper on window resize while
 // keeping aspect ratio

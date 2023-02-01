@@ -17,7 +17,9 @@ class TextTool : public QGraphicsTextItem
 public:
     TextTool();
     explicit TextTool(int size, QGraphicsItem *parent = nullptr);
-    ~TextTool(){};
+    ~TextTool(){
+        delete textDocument;
+    };
 
     void focusOutEvent(QFocusEvent* event) override;
     bool sceneEvent(QEvent *event) override;

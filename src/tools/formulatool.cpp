@@ -14,7 +14,6 @@ FormulaTool::FormulaTool()
 }
 
 
-
 bool FormulaTool::sceneEvent(QEvent *event)
 {
     if (event->type() == QEvent::GraphicsSceneMouseDoubleClick)

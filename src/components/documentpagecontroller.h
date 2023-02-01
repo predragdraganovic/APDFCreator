@@ -14,6 +14,9 @@ class DocumentPageController : public QHBoxLayout
     Q_OBJECT
 public:
     DocumentPageController(int currentPage, int currentNumberOfPages);
+    ~DocumentPageController(){
+        delete inputValidator;
+    }
 
 private:
     QPushButton *btnPrevPage;

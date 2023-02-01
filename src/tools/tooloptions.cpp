@@ -20,12 +20,12 @@ void ToolOptions::componentFocused(QGraphicsItem *current, QGraphicsItem *previo
 
         if (current->type() == TextTool::Type)
         {
-            setTextToolOptions(*static_cast<TextTool*>(current));
+            setTextToolOptions(*static_cast<TextTool *>(current));
         }
 
         else if (current->type() == ImageTool::Type)
         {
-            setImageToolOptions(*static_cast<ImageTool*>(current));
+            setImageToolOptions(*static_cast<ImageTool *>(current));
         }
 
         emit componentOptionsReady(componentOptionsHolder);
@@ -96,7 +96,7 @@ void ToolOptions::setImageToolOptions(ImageTool &current)
 void ToolOptions::changeTextToolFont(QFont newFont)
 {
 
-    TextTool *current = static_cast<TextTool*>(itemToEdit);
+    TextTool *current = static_cast<TextTool *>(itemToEdit);
 
     if (fontSize != nullptr)
     {
@@ -112,7 +112,7 @@ void ToolOptions::changeTextToolFont(QFont newFont)
 void ToolOptions::changeTextToolFontSize(const QString &newSize)
 {
 
-    TextTool *current = static_cast<TextTool*>(itemToEdit);
+    TextTool *current = static_cast<TextTool *>(itemToEdit);
     QFont newFont     = current->getTextDocument()->defaultFont();
     int newPointSize  = newSize.toInt();
     newFont.setPointSize(newPointSize * (300 / 72.0));
@@ -127,7 +127,7 @@ void ToolOptions::changeImageToolScale(int percentage)
 {
     qreal newScale = percentage / 100.0;
 
-    ImageTool *current = static_cast<ImageTool*>(itemToEdit);
+    ImageTool *current = static_cast<ImageTool *>(itemToEdit);
     current->setScaledPixmap(newScale);
     emit updateToolSize(current);
     scaleSelector->setValue(qRound(current->getImage_scale() * 100));

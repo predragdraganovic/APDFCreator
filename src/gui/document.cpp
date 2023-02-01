@@ -50,7 +50,7 @@ void Document::prevPage() { updatePageChanged(this->currentPage - 1); }
 
 void Document::deleteCurrentPage()
 {
-    delete reinterpret_cast<Paper*>(this->papers[this->currentPage]);
+    delete reinterpret_cast<Paper *>(this->papers[this->currentPage]);
 
     this->papers.removeAt(this->currentPage);
     if (this->papers.length() == 0)
