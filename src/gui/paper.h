@@ -24,15 +24,9 @@ public:
     explicit Paper(QObject *parent = nullptr);
     Paper(const QPageSize& page_size = QPageSize::A4, int res = 300, QObject *parent = nullptr);
     Paper(QRectF rect, QObject *parent):QGraphicsScene(rect, parent){}
-    // segf
-//    ~Paper();
-//{
-//        clearPage();
-//        delete this;
-//    }
-
-//    /** Removes all items from page */
-//    void clearPage();
+    ~Paper() {
+        delete pageGrid;
+    }
 
     QRectF getPaperRect() const;
     void setPaperRect(QRectF newRect);

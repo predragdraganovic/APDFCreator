@@ -17,6 +17,7 @@ public:
     };
 
     FormulaTool();
+    ~FormulaTool() {delete formulaEd;}
     FormulaTool(const QString& latex, int res): latexString(latex)
     {
         latexRes    = res;

@@ -12,6 +12,7 @@ TextTool::TextTool(int size, QGraphicsItem *parent)
     textDocument->setDefaultFont(font);
     QTextCursor *tc = new QTextCursor(textDocument);
     setTextCursor(*tc);
+    delete tc;
     this->textCursor().insertText("Double click to edit");
 
     setDocument(textDocument);

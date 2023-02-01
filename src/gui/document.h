@@ -16,7 +16,6 @@ public:
     // TODO: brisanje papira etc
     ~Document(){
         clearAllPages();
-        delete this;
     }
     Paper* getPaperAt(int position);
     Paper* getCurrentPage();
