@@ -13,15 +13,17 @@ SettingsScopeCombo::SettingsScopeCombo()
 
     this->setCurrentIndex(2);
 
-    this->setToolTip("Changes will be applied accordingly to whole document, or a part of it.");
+    this->setToolTip("Changes will be applied accordingly to whole document, or a part of "
+                     "it.");
 
     // TODO: obrisati ovaj test
-    connect(this, &SettingsScopeCombo::currentTextChanged, this, [=](QString text){
+    connect(this, &SettingsScopeCombo::currentTextChanged, this, [=](const QString &text) {
         std::cout << this->currentText().toStdString() << std::endl;
-        std::cout << QString(QVariant::fromValue(getSelectedScope()).toString()).toStdString()<< std::endl;
+        std::cout << QString(QVariant::fromValue(getSelectedScope()).toString()).toStdString() << std::endl;
     });
 }
 
-SettingsScopeCombo::SetupScope SettingsScopeCombo::getSelectedScope(){
+SettingsScopeCombo::SetupScope SettingsScopeCombo::getSelectedScope()
+{
     return this->setupScopeOptions->value(this->currentText(), SetupScope::WHOLE_DOCUMENT);
 }

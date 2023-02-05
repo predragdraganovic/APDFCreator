@@ -1,23 +1,20 @@
 #include "pagesetup.h"
 #include "ui_pagesetup.h"
 
-PageSetup::PageSetup(Document &document, QGraphicsView &view, QWidget *parent) :
-    QDialog(parent),
-    ui(new Ui::pagesetup)
+PageSetup::PageSetup(Document &document, QGraphicsView &view, QWidget *parent) : QDialog(parent), ui(new Ui::pagesetup)
 {
     ui->setupUi(this);
 
-    this->pageProperties = new PageProperties(
-                document.getCurrentPage()->getPageSize(),
-                document.getCurrentPage()->getRes(),
-                document.getCurrentPage()->getMarginTop(),
-                document.getCurrentPage()->getMarginBottom(),
-                document.getCurrentPage()->getMarginLeft(),
-                document.getCurrentPage()->getMarginRight()
-                );
+    this->pageProperties =
+        new PageProperties(document.getCurrentPage()->getPageSize(), document.getCurrentPage()->getRes(),
+                           document.getCurrentPage()->getMarginTop(), document.getCurrentPage()->getMarginBottom(),
+                           document.getCurrentPage()->getMarginLeft(), document.getCurrentPage()->getMarginRight());
 
-
-    QStringList dpi = (QStringList()<<"72"<<"200"<<"300"<<"600"<<"1200");
+    QStringList dpi = (QStringList() << "72"
+                                     << "200"
+                                     << "300"
+                                     << "600"
+                                     << "1200");
     ui->comboBox->addItems(dpi);
 
     comboSettingsScope = new SettingsScopeCombo();
@@ -26,7 +23,7 @@ PageSetup::PageSetup(Document &document, QGraphicsView &view, QWidget *parent) :
     paperSize = new PaperSizeCombo(document.getCurrentPage()->getPageSize());
     ui->hLayoutPaperSizes->addWidget(paperSize);
 
-    currentView = &view;
+    currentView    = &view;
     this->document = &document;
 
     ui->comboBox->setCurrentText(QString::number(document.getCurrentPage()->getRes()));
@@ -35,30 +32,18 @@ PageSetup::PageSetup(Document &document, QGraphicsView &view, QWidget *parent) :
     ui->marginBottom->setValue(pageProperties->getMarginBottom());
     ui->marginLeft->setValue(pageProperties->getMarginLeft());
     ui->marginRight->setValue(pageProperties->getMarginRight());
-
 }
 
-PageSetup::~PageSetup()
-{
-    delete ui;
+PageSetup::~PageSetup() { delete ui; }
 
+void PageSetup::on_pushButton_2_clicked() { close(); }
 
-}
-
-void PageSetup::on_pushButton_2_clicked()
-{
-    close();
-}
-
-void PageSetup::on_comboBox_currentTextChanged(const QString &arg1)
-{
-    this->pageProperties->setDpi(arg1.toInt());
-}
-
+void PageSetup::on_comboBox_currentTextChanged(const QString &arg1) { this->pageProperties->setDpi(arg1.toInt()); }
 
 void PageSetup::on_pushButton_clicked()
 {
-    //this->pageProperties->setDpi(ui->comboBox->currentText().toInt()); // postavlja se listener-om
+    // this->pageProperties->setDpi(ui->comboBox->currentText().toInt()); //
+    // postavlja se listener-om
     this->pageProperties->setPageSize(paperSize->getSelectedPageSize());
     this->pageProperties->setMarginTop(ui->marginTop->value());
     this->pageProperties->setMarginBottom(ui->marginBottom->value());
@@ -68,9 +53,7 @@ void PageSetup::on_pushButton_clicked()
     document->applyProperties(*pageProperties, comboSettingsScope->getSelectedScope());
 
     currentView->update();
-    currentView->fitInView(document->getCurrentPage()->sceneRect(),Qt::KeepAspectRatio);
+    currentView->fitInView(document->getCurrentPage()->sceneRect(), Qt::KeepAspectRatio);
 
     close();
 }
-
-

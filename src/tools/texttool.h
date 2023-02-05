@@ -16,14 +16,16 @@ class TextTool : public QGraphicsTextItem
 {
 public:
     TextTool();
-    TextTool(int size, QGraphicsItem *parent = nullptr);
-    ~TextTool(){};
+    explicit TextTool(int size, QGraphicsItem *parent = nullptr);
+    ~TextTool(){
+        delete textDocument;
+    };
 
     void focusOutEvent(QFocusEvent* event) override;
     bool sceneEvent(QEvent *event) override;
 
     QString getTextData() const;
-    void setTextData(QString newTextData);
+    void setTextData(const QString& text);
 
     QTextDocument *getTextDocument() const;
     QVBoxLayout *getToolOptions() const;

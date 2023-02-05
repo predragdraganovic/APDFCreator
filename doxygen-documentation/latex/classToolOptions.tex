@@ -1,0 +1,157 @@
+\hypertarget{classToolOptions}{}\doxysection{Tool\+Options Class Reference}
+\label{classToolOptions}\index{ToolOptions@{ToolOptions}}
+
+
+{\ttfamily \#include $<$tooloptions.\+h$>$}
+
+
+
+Inheritance diagram for Tool\+Options\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=154pt]{classToolOptions__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Tool\+Options\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=154pt]{classToolOptions__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Slots}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classToolOptions_a9813f68eefc29054ca97573158517eda}{component\+Focused}} (QGraphics\+Item $\ast$, QGraphics\+Item $\ast$)
+\item 
+void \mbox{\hyperlink{classToolOptions_a204074e1ef0efd3807bdf4652019f429}{change\+Text\+Tool\+Font}} (QFont)
+\item 
+void \mbox{\hyperlink{classToolOptions_a95617ce2b5c8be056cca7b157d046195}{change\+Text\+Tool\+Font\+Size}} (const QString \&)
+\item 
+void \mbox{\hyperlink{classToolOptions_a14610c448d8a9d7bc6a953409a233d93}{change\+Image\+Tool\+Scale}} (int)
+\end{DoxyCompactItemize}
+\doxysubsection*{Signals}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classToolOptions_aef5e62e36c5f1178e29280853f750f16}{component\+Options\+Ready}} (QGroup\+Box $\ast$)
+\item 
+void \mbox{\hyperlink{classToolOptions_a35d233a0f862743d439419ee683d987f}{remove\+Component\+Options}} ()
+\item 
+void \mbox{\hyperlink{classToolOptions_a2e5a3f9da4d8cadb8f08bea918512288}{update\+Tool\+Size}} (QGraphics\+Item $\ast$)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classToolOptions_a94b0d608d7778b96794f4a390e0e6a64}{Tool\+Options}} (QObject $\ast$parent=nullptr)
+\item 
+QGroup\+Box $\ast$ \mbox{\hyperlink{classToolOptions_ad13cdf9521ca8aa919859189682ad887}{get\+Component\+Options\+Holder}} () const
+\item 
+void \mbox{\hyperlink{classToolOptions_a340c28f7bfa5323df819fc62436e80cc}{delete\+Tools}} ()
+\item 
+int \mbox{\hyperlink{classToolOptions_a87c57aebf33c79eb2103a803bae71007}{get\+Paper\+Width}} () const
+\item 
+void \mbox{\hyperlink{classToolOptions_aba1cbd96d47f240c9e87bc4f1838e88e}{set\+Paper\+Width}} (int new\+Paper\+Width)
+\item 
+int \mbox{\hyperlink{classToolOptions_a22bcf41633eb59074039674483aa2c77}{get\+Paper\+Height}} () const
+\item 
+void \mbox{\hyperlink{classToolOptions_af11c9c2f0319060a844b5b158046ef6a}{set\+Paper\+Height}} (int new\+Paper\+Height)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classToolOptions_a94b0d608d7778b96794f4a390e0e6a64}\label{classToolOptions_a94b0d608d7778b96794f4a390e0e6a64}} 
+\index{ToolOptions@{ToolOptions}!ToolOptions@{ToolOptions}}
+\index{ToolOptions@{ToolOptions}!ToolOptions@{ToolOptions}}
+\doxysubsubsection{\texorpdfstring{ToolOptions()}{ToolOptions()}}
+{\footnotesize\ttfamily Tool\+Options\+::\+Tool\+Options (\begin{DoxyParamCaption}\item[{QObject $\ast$}]{parent = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classToolOptions_a14610c448d8a9d7bc6a953409a233d93}\label{classToolOptions_a14610c448d8a9d7bc6a953409a233d93}} 
+\index{ToolOptions@{ToolOptions}!changeImageToolScale@{changeImageToolScale}}
+\index{changeImageToolScale@{changeImageToolScale}!ToolOptions@{ToolOptions}}
+\doxysubsubsection{\texorpdfstring{changeImageToolScale}{changeImageToolScale}}
+{\footnotesize\ttfamily void Tool\+Options\+::change\+Image\+Tool\+Scale (\begin{DoxyParamCaption}\item[{int}]{percentage }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+\mbox{\Hypertarget{classToolOptions_a204074e1ef0efd3807bdf4652019f429}\label{classToolOptions_a204074e1ef0efd3807bdf4652019f429}} 
+\index{ToolOptions@{ToolOptions}!changeTextToolFont@{changeTextToolFont}}
+\index{changeTextToolFont@{changeTextToolFont}!ToolOptions@{ToolOptions}}
+\doxysubsubsection{\texorpdfstring{changeTextToolFont}{changeTextToolFont}}
+{\footnotesize\ttfamily void Tool\+Options\+::change\+Text\+Tool\+Font (\begin{DoxyParamCaption}\item[{QFont}]{new\+Font }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+\mbox{\Hypertarget{classToolOptions_a95617ce2b5c8be056cca7b157d046195}\label{classToolOptions_a95617ce2b5c8be056cca7b157d046195}} 
+\index{ToolOptions@{ToolOptions}!changeTextToolFontSize@{changeTextToolFontSize}}
+\index{changeTextToolFontSize@{changeTextToolFontSize}!ToolOptions@{ToolOptions}}
+\doxysubsubsection{\texorpdfstring{changeTextToolFontSize}{changeTextToolFontSize}}
+{\footnotesize\ttfamily void Tool\+Options\+::change\+Text\+Tool\+Font\+Size (\begin{DoxyParamCaption}\item[{const QString \&}]{new\+Size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+\mbox{\Hypertarget{classToolOptions_a9813f68eefc29054ca97573158517eda}\label{classToolOptions_a9813f68eefc29054ca97573158517eda}} 
+\index{ToolOptions@{ToolOptions}!componentFocused@{componentFocused}}
+\index{componentFocused@{componentFocused}!ToolOptions@{ToolOptions}}
+\doxysubsubsection{\texorpdfstring{componentFocused}{componentFocused}}
+{\footnotesize\ttfamily void Tool\+Options\+::component\+Focused (\begin{DoxyParamCaption}\item[{QGraphics\+Item $\ast$}]{current,  }\item[{QGraphics\+Item $\ast$}]{previous }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+\mbox{\Hypertarget{classToolOptions_aef5e62e36c5f1178e29280853f750f16}\label{classToolOptions_aef5e62e36c5f1178e29280853f750f16}} 
+\index{ToolOptions@{ToolOptions}!componentOptionsReady@{componentOptionsReady}}
+\index{componentOptionsReady@{componentOptionsReady}!ToolOptions@{ToolOptions}}
+\doxysubsubsection{\texorpdfstring{componentOptionsReady}{componentOptionsReady}}
+{\footnotesize\ttfamily void Tool\+Options\+::component\+Options\+Ready (\begin{DoxyParamCaption}\item[{QGroup\+Box $\ast$}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+\mbox{\Hypertarget{classToolOptions_a340c28f7bfa5323df819fc62436e80cc}\label{classToolOptions_a340c28f7bfa5323df819fc62436e80cc}} 
+\index{ToolOptions@{ToolOptions}!deleteTools@{deleteTools}}
+\index{deleteTools@{deleteTools}!ToolOptions@{ToolOptions}}
+\doxysubsubsection{\texorpdfstring{deleteTools()}{deleteTools()}}
+{\footnotesize\ttfamily void Tool\+Options\+::delete\+Tools (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classToolOptions_ad13cdf9521ca8aa919859189682ad887}\label{classToolOptions_ad13cdf9521ca8aa919859189682ad887}} 
+\index{ToolOptions@{ToolOptions}!getComponentOptionsHolder@{getComponentOptionsHolder}}
+\index{getComponentOptionsHolder@{getComponentOptionsHolder}!ToolOptions@{ToolOptions}}
+\doxysubsubsection{\texorpdfstring{getComponentOptionsHolder()}{getComponentOptionsHolder()}}
+{\footnotesize\ttfamily QGroup\+Box $\ast$ Tool\+Options\+::get\+Component\+Options\+Holder (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classToolOptions_a22bcf41633eb59074039674483aa2c77}\label{classToolOptions_a22bcf41633eb59074039674483aa2c77}} 
+\index{ToolOptions@{ToolOptions}!getPaperHeight@{getPaperHeight}}
+\index{getPaperHeight@{getPaperHeight}!ToolOptions@{ToolOptions}}
+\doxysubsubsection{\texorpdfstring{getPaperHeight()}{getPaperHeight()}}
+{\footnotesize\ttfamily int Tool\+Options\+::get\+Paper\+Height (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classToolOptions_a87c57aebf33c79eb2103a803bae71007}\label{classToolOptions_a87c57aebf33c79eb2103a803bae71007}} 
+\index{ToolOptions@{ToolOptions}!getPaperWidth@{getPaperWidth}}
+\index{getPaperWidth@{getPaperWidth}!ToolOptions@{ToolOptions}}
+\doxysubsubsection{\texorpdfstring{getPaperWidth()}{getPaperWidth()}}
+{\footnotesize\ttfamily int Tool\+Options\+::get\+Paper\+Width (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classToolOptions_a35d233a0f862743d439419ee683d987f}\label{classToolOptions_a35d233a0f862743d439419ee683d987f}} 
+\index{ToolOptions@{ToolOptions}!removeComponentOptions@{removeComponentOptions}}
+\index{removeComponentOptions@{removeComponentOptions}!ToolOptions@{ToolOptions}}
+\doxysubsubsection{\texorpdfstring{removeComponentOptions}{removeComponentOptions}}
+{\footnotesize\ttfamily void Tool\+Options\+::remove\+Component\+Options (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+\mbox{\Hypertarget{classToolOptions_af11c9c2f0319060a844b5b158046ef6a}\label{classToolOptions_af11c9c2f0319060a844b5b158046ef6a}} 
+\index{ToolOptions@{ToolOptions}!setPaperHeight@{setPaperHeight}}
+\index{setPaperHeight@{setPaperHeight}!ToolOptions@{ToolOptions}}
+\doxysubsubsection{\texorpdfstring{setPaperHeight()}{setPaperHeight()}}
+{\footnotesize\ttfamily void Tool\+Options\+::set\+Paper\+Height (\begin{DoxyParamCaption}\item[{int}]{new\+Paper\+Height }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classToolOptions_aba1cbd96d47f240c9e87bc4f1838e88e}\label{classToolOptions_aba1cbd96d47f240c9e87bc4f1838e88e}} 
+\index{ToolOptions@{ToolOptions}!setPaperWidth@{setPaperWidth}}
+\index{setPaperWidth@{setPaperWidth}!ToolOptions@{ToolOptions}}
+\doxysubsubsection{\texorpdfstring{setPaperWidth()}{setPaperWidth()}}
+{\footnotesize\ttfamily void Tool\+Options\+::set\+Paper\+Width (\begin{DoxyParamCaption}\item[{int}]{new\+Paper\+Width }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classToolOptions_a2e5a3f9da4d8cadb8f08bea918512288}\label{classToolOptions_a2e5a3f9da4d8cadb8f08bea918512288}} 
+\index{ToolOptions@{ToolOptions}!updateToolSize@{updateToolSize}}
+\index{updateToolSize@{updateToolSize}!ToolOptions@{ToolOptions}}
+\doxysubsubsection{\texorpdfstring{updateToolSize}{updateToolSize}}
+{\footnotesize\ttfamily void Tool\+Options\+::update\+Tool\+Size (\begin{DoxyParamCaption}\item[{QGraphics\+Item $\ast$}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/tools/\mbox{\hyperlink{tooloptions_8h}{tooloptions.\+h}}\item 
+src/tools/\mbox{\hyperlink{tooloptions_8cpp}{tooloptions.\+cpp}}\end{DoxyCompactItemize}

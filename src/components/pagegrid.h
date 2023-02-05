@@ -14,8 +14,7 @@ public:
         Type = UserType+4
     };
 
-    PageGrid(QPageSize pageSize){
-        pagePixel = QPageSize::sizePixels(pageSize.id(), 300);
+    explicit PageGrid(QPageSize pageSize): pagePixel(QPageSize::sizePixels(pageSize.id(), 300)){
         setVisible(false);
     }
 

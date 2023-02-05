@@ -22,22 +22,16 @@ class Paper : public QGraphicsScene
     Q_OBJECT
 public:
     explicit Paper(QObject *parent = nullptr);
-    Paper(QPageSize page_size = QPageSize::A4, int res = 300, QObject *parent = nullptr);
+    Paper(const QPageSize& page_size = QPageSize::A4, int res = 300, QObject *parent = nullptr);
     Paper(QRectF rect, QObject *parent):QGraphicsScene(rect, parent){}
-    // segf
-//    ~Paper();
-//{
-//        clearPage();
-//        delete this;
-//    }
-
-//    /** Removes all items from page */
-//    void clearPage();
+    ~Paper() {
+        delete pageGrid;
+    }
 
     QRectF getPaperRect() const;
     void setPaperRect(QRectF newRect);
 
-    void applyProperties(PageProperties pageProperties);
+    void applyProperties(const PageProperties& pageProperties);
 
     int getRes() const;
     void setRes(int newRes);
@@ -74,15 +68,15 @@ signals:
 
 private:
     QRectF paperRectangle;
-    QGraphicsRectItem* rectItem;
+    QGraphicsRectItem* rectItem = nullptr;
     QPageSize pageSize;
-    PageGrid *pageGrid;
+    PageGrid *pageGrid = nullptr;
 
-    int res;
-    double marginTop;
-    double marginBottom;
-    double marginLeft;
-    double marginRight;
+    int res = 0;
+    double marginTop = 0;
+    double marginBottom = 0;
+    double marginLeft = 0;
+    double marginRight = 0;
 
 
     void drawPaper();

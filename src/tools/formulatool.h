@@ -17,10 +17,17 @@ public:
     };
 
     FormulaTool();
-    FormulaTool(QString latex, int res);
+    ~FormulaTool() {delete formulaEd;}
+    FormulaTool(const QString& latex, int res): latexString(latex)
+    {
+        latexRes    = res;
+
+        setPixmap(updateImage(latexRes, latexString));
+        setFlags(QGraphicsItem::ItemIsMovable);
+    }
 
     bool sceneEvent(QEvent *event) override;
-    QPixmap updateImage(int latexRes, QString latexString);
+    QPixmap updateImage(int latexRes, const QString& latexString);
 
     const QString &getLatexString() const;
     void setLatexString(const QString &newLatexString);
